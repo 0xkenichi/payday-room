@@ -1,0 +1,91 @@
+# Payday Room, as a Switch template.
+#
+# Import it in Switch Console (Templates → Import template), then Use it.
+# It creates two Claude Code agents, Tally and Treasurer, and puts them in the
+# Payday Room with you, on your messaging app.
+#
+# Both agents work in the same folder, your clone of the payday-room repo,
+# because Tally hands Treasurer an approved table through payday/<month>/ and
+# both read PAYOUT_RULES.md and team.yaml from it.
+#
+# Their instructions are switch/tally.AGENT.md and switch/treasurer.AGENT.md;
+# `npm run template` writes them into switch/payday-room.template.yaml, the
+# file you import. Edit the .md files, not the generated template.
+version: 1
+params:
+  where:
+    type: room
+    label: Payday room
+    description: >-
+      The room the agents start in. New room makes one on your messaging app;
+      on Telegram, pick the group's room once you've added the bot to it.
+    default: [$new]
+  bridge:
+    type: bridge
+    label: Messaging app
+    default: [Telegram, Slack, Discord, Mattermost, $first]
+    required: false
+  directory:
+    type: directory
+    label: Your payday-room clone
+    description: The folder you cloned github.com/0xkenichi/payday-room into. Both agents work there.
+    default: "~/payday-room"
+  provider:
+    type: provider
+    default: [claude]
+    input: advanced
+  location:
+    type: location
+    default: local
+    input: advanced
+form:
+  advanced:
+    label: Advanced
+    open: false
+
+agents:
+  - name: tally
+    display_name: Tally
+    description: >-
+      Reads the month's work claims in the Payday Room, applies
+      PAYOUT_RULES.md and posts a draft payout table for the lead, flagging
+      anything unclear. Never moves money.
+    provider: "{provider}"
+    location: "{location}"
+    directory: "{directory}"
+    addressing: anyone
+    join: ["{where}"]
+    instructions: (written by npm run template from switch/tally.AGENT.md)
+  - name: treasurer
+    display_name: Treasurer
+    description: >-
+      Turns the lead-approved table into one batch of testnet USDC transfers
+      on Arc, waits for two human approvals in the room, sends, and posts the
+      receipts. Its only way to move money is scripts/pay-batch.ts.
+    provider: "{provider}"
+    location: "{location}"
+    directory: "{directory}"
+    addressing: anyone
+    join: ["{where}"]
+    instructions: (written by npm run template from switch/treasurer.AGENT.md)
+
+room:
+  name: Payday Room
+  description: >-
+    Where contributors post what they did, Tally drafts the month's payouts,
+    the lead approves them, and Treasurer pays them in testnet USDC after two
+    approvals.
+  channel_type: channel_private
+  bridge: "{bridge}"
+  agents: [tally, treasurer]
+  users: ["{$creator}"]
+  instructions: |
+    This room pays contributors. Post work claims in plain words with a link
+    (see PAYOUT_RULES.md). Tally drafts the table; only the lead in team.yaml
+    approves it; Treasurer pays only after two different approvers reply
+    "approve <batch id>". Agents never decide disputes and never send money
+    outside scripts/pay-batch.ts.
+
+kickoff: |
+  @tally @treasurer hi. Introduce yourselves in one line each: what you do in
+  this room and what you need from people.

@@ -1,0 +1,22 @@
+{
+  "name": "payday-room",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A Switch room where AI agents tally contributor work and pay it out in testnet USDC, only after humans approve.",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=23.6"
+  },
+  "scripts": {
+    "tally": "node scripts/tally.ts",
+    "pay": "node scripts/pay-batch.ts",
+    "balance": "node scripts/pay-batch.ts balance",
+    "test": "node --test test/",
+    "template": "node scripts/build-template.ts"
+  },
+  "dependencies": {
+    "viem": "^2.57.13",
+    "yaml": "^2.8.1"
+  }
+}

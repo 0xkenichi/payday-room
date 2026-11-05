@@ -1,0 +1,73 @@
+{
+  "kind": "payday-batch",
+  "batch_id": "PAY-2026-09-878928",
+  "month": "2026-09",
+  "table_revision": 1,
+  "table_hash": "bcdeecfb6301",
+  "chain_id": 5042002,
+  "token": "0x3600000000000000000000000000000000000000",
+  "from": "0xdE7F82c56e4b59fE6a59716455950B991038b922",
+  "planned_at": "2026-11-05T00:53:29.484Z",
+  "total_micro": "1670000",
+  "transfers": [
+    {
+      "i": 1,
+      "handle": "ada",
+      "wallet": "0xFf063d6D559FdFd2B24935164670285eA6ebe321",
+      "amount_micro": "940000",
+      "tx_hash": "0x7778fd7ad38d00bdd638b3668a6cdee775600e583ae484283cb49a18efd4b765",
+      "status": "success",
+      "block": "70776825"
+    },
+    {
+      "i": 2,
+      "handle": "chioma",
+      "wallet": "0xbE2bC9C881d400EC59cAF9481aB2058eF87Af349",
+      "amount_micro": "340000",
+      "tx_hash": "0x84501cd3811f8c01a722add714f83c7bb1e8e60fc9f372440bf9f4fa4a03057c",
+      "status": "success",
+      "block": "70776835"
+    },
+    {
+      "i": 3,
+      "handle": "tunde",
+      "wallet": "0x52A8b5eC3c3C710C0e0143B5d3F56177d43a8C7B",
+      "amount_micro": "200000",
+      "tx_hash": "0x30c33e8047ec61eca6f62a8909bc475a53fd6549f97e90b4d0a0fbeff00c5ab0",
+      "status": "success",
+      "block": "70776838"
+    },
+    {
+      "i": 4,
+      "handle": "bayo",
+      "wallet": "0x3DE8B916a34F54e953C990cB34Bd691d63b274F8",
+      "amount_micro": "130000",
+      "tx_hash": "0x76801502f2999ff5ae400eb7bb4b4d4afeedb1c0127e2dc251afc2f27c7a30f9",
+      "status": "success",
+      "block": "70776841"
+    },
+    {
+      "i": 5,
+      "handle": "zainab",
+      "wallet": "0x746E24938ca4D01E1983ae3fE76A6F17b7840268",
+      "amount_micro": "60000",
+      "tx_hash": "0xaadf02c94578b794c407edbec6b78cee0f670a4ab31f6384f49b36042df6683a",
+      "status": "success",
+      "block": "70776842"
+    }
+  ],
+  "status": "sent",
+  "approvals": [
+    {
+      "by": "stillkenichi",
+      "text": "approve PAY-2026-09-878928",
+      "at": "2026-11-05T00:53:39Z"
+    },
+    {
+      "by": "second_approver",
+      "text": "approve PAY-2026-09-878928 👍",
+      "at": "2026-11-05T00:53:39Z"
+    }
+  ],
+  "sent_at": "2026-11-05T00:53:50.514Z"
+}

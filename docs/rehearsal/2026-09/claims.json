@@ -1,0 +1,78 @@
+{
+  "month": "2026-09",
+  "claims": [
+    {
+      "ref": "c1",
+      "contributor": "ada",
+      "posted_by": "stillkenichi",
+      "text": "for @ada: fixed the rounding bug in the payout script, about a day of work https://github.com/0xkenichi/payday-room/pull/4",
+      "type": "code",
+      "size": "M",
+      "size_source": "stated",
+      "evidence": "https://github.com/0xkenichi/payday-room/pull/4"
+    },
+    {
+      "ref": "c2",
+      "contributor": "ada",
+      "posted_by": "stillkenichi",
+      "text": "for @ada: shipped the ledger export, three days https://github.com/0xkenichi/payday-room/pull/7",
+      "type": "code",
+      "size": "L",
+      "size_source": "stated",
+      "evidence": "https://github.com/0xkenichi/payday-room/pull/7"
+    },
+    {
+      "ref": "c3",
+      "contributor": "chioma",
+      "posted_by": "stillkenichi",
+      "text": "for @chioma: wrote the 10-minute setup guide, half a day https://github.com/0xkenichi/payday-room#setup",
+      "type": "docs",
+      "size": "M",
+      "size_source": "stated",
+      "evidence": "https://github.com/0xkenichi/payday-room#setup"
+    },
+    {
+      "ref": "c4",
+      "contributor": "tunde",
+      "posted_by": "stillkenichi",
+      "text": "for @tunde: ran the Lagos builders call, 40 people https://x.com/0xKenichi/status/1",
+      "type": "community",
+      "size": "M",
+      "size_source": "inferred",
+      "evidence": "https://x.com/0xKenichi/status/1",
+      "note": "no size given; a 40-person call reads as M",
+      "resolution": "accept"
+    },
+    {
+      "ref": "c5",
+      "contributor": "bayo",
+      "posted_by": "stillkenichi",
+      "text": "for @bayo: designed the payout receipt card",
+      "type": "design",
+      "size": "S",
+      "size_source": "stated",
+      "evidence": "https://www.figma.com/file/payday-receipt"
+    },
+    {
+      "ref": "c6",
+      "contributor": "zainab",
+      "posted_by": "stillkenichi",
+      "text": "for @zainab: reviewed PRs #4 and #7, an hour each https://github.com/0xkenichi/payday-room/pull/4",
+      "type": "review",
+      "size": "S",
+      "size_source": "stated",
+      "evidence": "https://github.com/0xkenichi/payday-room/pull/4"
+    },
+    {
+      "ref": "c7",
+      "contributor": "kola",
+      "posted_by": "stillkenichi",
+      "text": "for @kola: translated the README to Yoruba https://github.com/0xkenichi/payday-room/pull/9",
+      "type": "docs",
+      "size": "M",
+      "size_source": "stated",
+      "evidence": "https://github.com/0xkenichi/payday-room/pull/9",
+      "resolution": "drop"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node scripts/tally.ts:*)",
+      "Bash(node scripts/pay-batch.ts plan:*)",
+      "Bash(node scripts/pay-batch.ts verify:*)",
+      "Bash(node scripts/pay-batch.ts status:*)",
+      "Bash(node scripts/pay-batch.ts balance)",
+      "Edit(payday/**)",
+      "Write(payday/**)"
+    ],
+    "ask": [
+      "Bash(node scripts/pay-batch.ts send:*)"
+    ],
+    "deny": [
+      "Read(.env)",
+      "Read(**/.env)",
+      "Read(**/.env.*)",
+      "Read(**/*.key)",
+      "Bash(cat:*)",
+      "Bash(printenv:*)",
+      "Bash(env:*)",
+      "Edit(scripts/**)",
+      "Write(scripts/**)",
+      "Edit(PAYOUT_RULES.md)",
+      "Write(PAYOUT_RULES.md)",
+      "Edit(team.yaml)",
+      "Write(team.yaml)",
+      "Edit(ledger.csv)",
+      "Write(ledger.csv)",
+      "Edit(.claude/**)",
+      "Write(.claude/**)"
+    ]
+  }
+}

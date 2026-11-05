@@ -1,0 +1,82 @@
+{
+  "kind": "payday-table",
+  "month": "2026-09",
+  "revision": 1,
+  "rules_hash": "4564f931bd4f",
+  "claims_hash": "a895efd728d4",
+  "pool_micro": "3000000",
+  "reserve_micro": "300000",
+  "distributable_micro": "2700000",
+  "cap_micro": "940000",
+  "rows": [
+    {
+      "handle": "ada",
+      "name": "Ada Okafor",
+      "wallet": "0xFf063d6D559FdFd2B24935164670285eA6ebe321",
+      "points": 28,
+      "payout_micro": "940000",
+      "capped": true,
+      "below_min": false,
+      "claims": [
+        "c1",
+        "c2"
+      ]
+    },
+    {
+      "handle": "chioma",
+      "name": "Chioma Eze",
+      "wallet": "0xbE2bC9C881d400EC59cAF9481aB2058eF87Af349",
+      "points": 5,
+      "payout_micro": "340000",
+      "capped": false,
+      "below_min": false,
+      "claims": [
+        "c3"
+      ]
+    },
+    {
+      "handle": "tunde",
+      "name": "Tunde Bello",
+      "wallet": "0x52A8b5eC3c3C710C0e0143B5d3F56177d43a8C7B",
+      "points": 3,
+      "payout_micro": "200000",
+      "capped": false,
+      "below_min": false,
+      "claims": [
+        "c4"
+      ]
+    },
+    {
+      "handle": "bayo",
+      "name": "Bayo Adeyemi",
+      "wallet": "0x3DE8B916a34F54e953C990cB34Bd691d63b274F8",
+      "points": 2,
+      "payout_micro": "130000",
+      "capped": false,
+      "below_min": false,
+      "claims": [
+        "c5"
+      ]
+    },
+    {
+      "handle": "zainab",
+      "name": "Zainab Musa",
+      "wallet": "0x746E24938ca4D01E1983ae3fE76A6F17b7840268",
+      "points": 1,
+      "payout_micro": "60000",
+      "capped": false,
+      "below_min": false,
+      "claims": [
+        "c6"
+      ]
+    }
+  ],
+  "held": [],
+  "dropped": [
+    "c7"
+  ],
+  "total_points": 39,
+  "total_payout_micro": "1670000",
+  "to_reserve_micro": "1330000",
+  "table_hash": "bcdeecfb6301"
+}

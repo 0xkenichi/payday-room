@@ -1,0 +1,36 @@
+# Who is in the Payday Room, and who may approve what.
+#
+# Handles are chat usernames without the @. A contributor's handle is what the
+# Tally agent matches a claim to, so it must be the name they post under (or
+# the one a lead writes after "for @").
+#
+# Wallets are Arc TESTNET addresses. Never put a key in this file.
+
+lead: stillkenichi
+
+# Two different people from this list must approve a batch before it is sent.
+approvers:
+  - stillkenichi
+  - second_approver   # replace with the second approver's chat username
+
+contributors:
+  ada:
+    name: Ada Okafor
+    role: backend
+    wallet: "0xFf063d6D559FdFd2B24935164670285eA6ebe321"
+  tunde:
+    name: Tunde Bello
+    role: community
+    wallet: "0x52A8b5eC3c3C710C0e0143B5d3F56177d43a8C7B"
+  chioma:
+    name: Chioma Eze
+    role: docs
+    wallet: "0xbE2bC9C881d400EC59cAF9481aB2058eF87Af349"
+  bayo:
+    name: Bayo Adeyemi
+    role: design
+    wallet: "0x3DE8B916a34F54e953C990cB34Bd691d63b274F8"
+  zainab:
+    name: Zainab Musa
+    role: review
+    wallet: "0x746E24938ca4D01E1983ae3fE76A6F17b7840268"
