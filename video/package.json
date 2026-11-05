@@ -1,0 +1,18 @@
+{
+  "name": "payday-room-video",
+  "private": true,
+  "description": "The Payday Room demo video, built with Remotion from real screenshots of a payday.",
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts PaydayRoom out/payday-room-demo.mp4"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.539",
+    "@remotion/google-fonts": "^4.0.539",
+    "@types/react": "^19.3.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "remotion": "^4.0.539",
+    "typescript": "^5.9.3"
+  }
+}
