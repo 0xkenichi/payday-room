@@ -5,3 +5,4 @@ node_modules/
 .DS_Store
 video/node_modules/
 video/out/
+video/public/music/*.mp3

@@ -5,7 +5,7 @@ import { existsSync } from "./exists";
 import { Caption, HowSwitch, Intro, Opener, Outro, Placeholder } from "./scenes";
 import { Shots, type ShotSpec } from "./Shots";
 import { FPS } from "./theme";
-import { proof, setup, steps, T } from "./timeline";
+import { proof, setup, steps, T, VO_SECONDS } from "./timeline";
 
 const REPO = "github.com/0xkenichi/payday-room";
 const f = (s: number) => Math.round(s * FPS);
@@ -49,20 +49,50 @@ const sections: { key: string; seconds: number; el: React.ReactNode; vo?: string
   { key: "outro", seconds: T.outro, el: <Outro repo={REPO} />, vo: "outro" },
 ];
 
-const Demo: React.FC = () => (
-  <Series>
-    {sections.map((s) => (
-      <Series.Sequence key={s.key} durationInFrames={f(s.seconds)}>
-        <AbsoluteFill>
-          {s.el}
-          <Voice name={s.vo} />
-        </AbsoluteFill>
-      </Series.Sequence>
-    ))}
-  </Series>
-);
-
 const total = sections.reduce((a, s) => a + s.seconds, 0);
+
+// "On The Flip" by The Grey Room / Density & Time, from the YouTube Audio
+// Library (no attribution required). It sits about 18 dB under the voice
+// while someone is talking and comes up between lines.
+const MUSIC = { talking: 0.07, between: 0.2, ramp: 0.5 };
+const voiceWindows = (() => {
+  let at = 0;
+  const out: [number, number][] = [];
+  for (const s of sections) {
+    const len = s.vo && existsSync(`vo/${s.vo}.mp3`) ? VO_SECONDS[s.vo] : undefined;
+    if (len) out.push([at + 0.4, at + 0.4 + len]);
+    at += s.seconds;
+  }
+  return out;
+})();
+
+const musicVolume = (frame: number) => {
+  const t = frame / FPS;
+  // 1 while a take is playing, easing to 0 over `ramp` seconds either side.
+  const talking = Math.max(
+    0,
+    ...voiceWindows.map(([a, b]) => Math.min(1, Math.max(0, Math.min(t - (a - MUSIC.ramp), b + MUSIC.ramp - t) / MUSIC.ramp))),
+  );
+  const level = MUSIC.between + (MUSIC.talking - MUSIC.between) * talking;
+  const fade = Math.min(1, t / 1.5, (total - t) / 3);
+  return Math.max(0, level * fade);
+};
+
+const Demo: React.FC = () => (
+  <>
+    {existsSync("music/on-the-flip.mp3") ? <Audio src={staticFile("music/on-the-flip.mp3")} volume={musicVolume} /> : null}
+    <Series>
+      {sections.map((s) => (
+        <Series.Sequence key={s.key} durationInFrames={f(s.seconds)}>
+          <AbsoluteFill>
+            {s.el}
+            <Voice name={s.vo} />
+          </AbsoluteFill>
+        </Series.Sequence>
+      ))}
+    </Series>
+  </>
+);
 
 export const RemotionRoot: React.FC = () => (
   <>

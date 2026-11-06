@@ -14,3 +14,7 @@ The lines are drafts until the recorded payday is final: the numbers and ids get
 | treasurer.mp3 | Treasurer | Then Treasurer takes over. It turns the table into one batch of USDC transfers on Arc testnet, and the batch id is a hash of who gets what, so an approval can't be reused. It needs two different approvers to quote that id. One isn't enough... [chuckles] it just refuses. With two, Switch puts an approval card right in the chat, and a person has to press Allow. |
 | receipts.mp3 | Receipts | And there it is. Every transfer, every receipt, linked on Arcscan... and the ledger's updated, so next month starts clean. |
 | outro.mp3 | Outro | [warmly] So that's Payday Room. Built for Flip the Switch, in the business workflow track. Without Switch, there's no room, no approvals, no receipts. The code's on GitHub... go have a look. |
+
+## Music
+
+"On The Flip" by The Grey Room / Density & Time, from the YouTube Audio Library (no attribution required). The track isn't in this repo, because the library's licence covers using it in videos, not passing the file on. To render with it, download it from YouTube Studio → Audio library and save the first 140 seconds as `public/music/on-the-flip.mp3`. Without the file, the video renders with the narration only. `src/Root.tsx` keeps the music about 18 dB under the voice while someone is talking, and lets it rise to about 9 dB under between lines.

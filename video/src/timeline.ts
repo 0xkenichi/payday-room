@@ -4,6 +4,16 @@ import type { ShotSpec } from "./Shots";
 // Seconds per animated section: its narration take plus a breath.
 export const T = { opener: 14.5, intro: 10.5, switch: 13, outro: 10 };
 
+// Length of each narration take, so the music can dip under the voice.
+export const VO_SECONDS: Record<string, number> = {
+  opener: 12.9,
+  intro: 8.75,
+  tally: 8.05,
+  treasurer: 14.76,
+  receipts: 5.8,
+  outro: 8.3,
+};
+
 // Switch Console, full width: the template and the agents it created.
 export const setup: { step: string; text: string; shots: ShotSpec[] } = {
   step: "SWITCH",
@@ -56,8 +66,8 @@ export const steps: { vo?: string; step: string; title: string; lines: string[];
     shots: [
       { file: "r1-06-batch.png", seconds: 6, focus: [0.07, 0.36, 0.7, 0.45] },
       { file: "r1-07-one-of-two.png", seconds: 6, focus: [0.07, 0.78, 0.7, 0.11] },
-      { file: "r1-08-second-approval.png", seconds: 5 },
-      { file: "r1-09-allow.png", seconds: 6 },
+      { file: "r1-08-second-approval.png", seconds: 5, focus: [0.08, 0.4, 0.84, 0.25] },
+      { file: "r1-09-allow.png", seconds: 6, focus: [0.07, 0.41, 0.7, 0.49] },
     ],
   },
   {
@@ -65,7 +75,7 @@ export const steps: { vo?: string; step: string; title: string; lines: string[];
     step: "6 · PAID",
     title: "Receipts in the chat",
     lines: ["USDC on Arc testnet, one transfer each.", "Every link posted, ledger.csv updated."],
-    shots: [{ file: "r1-10-receipts.png", seconds: 8 }],
+    shots: [{ file: "r1-10-receipts.png", seconds: 8, focus: [0.07, 0.2, 0.7, 0.45] }],
   },
 ];
 
@@ -73,5 +83,5 @@ export const steps: { vo?: string; step: string; title: string; lines: string[];
 export const proof: { step: string; text: string; shots: ShotSpec[] } = {
   step: "ON-CHAIN",
   text: "Every transfer is on Arc testnet's explorer, from the treasury to the contributor.",
-  shots: [{ file: "wide-03-arcscan.png", seconds: 5 }],
+  shots: [{ file: "wide-03-arcscan.png", seconds: 5, focus: [0, 0, 1, 0.84], zoom: 1 }],
 };
