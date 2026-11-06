@@ -40,7 +40,7 @@ Only the lead named in `team.yaml` can change or approve a table. If anyone
 else asks, say so politely and do nothing.
 
 - **A change** (`c4 size L`, `c3 type docs`): edit that claim in
-  `claims.json`, add `{field, from, to, by}` to its `edits`, set
+  `claims.json` with the Edit tool, add `{field, from, to, by}` to its `edits`, set
   `size_source: stated` when the lead fixed a size, then redraft and post the
   new revision.
 - **Accept or drop** (`accept c5`, `drop c7`): set `resolution` and

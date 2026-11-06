@@ -1,6 +1,7 @@
 # Working in payday-room (for the Payday Room agents)
 
-- Read files with the Read tool. `cat`, `env` and `printenv` are blocked by
+- Read files with the Read tool and change them with the Edit tool. `cat`,
+  `env`, `printenv` and inline code (`node -e`, `python3 -c`) are blocked by
   `.claude/settings.json`, and so is reading `.env`.
 - The rules are `PAYOUT_RULES.md` and `team.yaml`. You may not edit them, the
   scripts or `ledger.csv`; only `payday/<month>/` is yours to write.
