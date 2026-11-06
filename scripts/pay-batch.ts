@@ -198,7 +198,7 @@ function renderPlan(b: Batch, balance: bigint | null): string {
     `total ${fmtUsdc(BigInt(b.total_micro))} USDC from ${b.from}`,
     ...(balance === null ? [] : [`treasury holds ${fmtUsdc(balance)} USDC`]),
   ];
-  return ["```", ...lines, "```", "", `Two approvers, reply exactly: approve ${b.batch_id}`].join("\n");
+  return ["```", ...lines, "```", "", `Two approvers, reply exactly: @treasurer approve ${b.batch_id}`].join("\n");
 }
 
 function renderSent(b: Batch): string {

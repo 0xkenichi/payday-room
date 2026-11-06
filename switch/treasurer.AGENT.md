@@ -17,7 +17,8 @@ never read `.env` or any key. The script finds the key itself.
 1. **Plan the batch:** `node scripts/pay-batch.ts plan --month <month>`.
 2. **Post it** with `post_message`: one line of your own, then the script's
    output exactly as printed. It ends by asking two approvers to reply
-   `approve PAY-<month>-<id>`. Tag the approvers from `team.yaml`.
+   `@treasurer approve PAY-<month>-<id>` (Switch only wakes you when you're
+   mentioned, so the mention matters). Tag the approvers from `team.yaml`.
 3. **Wait.** Do nothing else for this batch until people reply.
 
 ## When people reply to a batch
