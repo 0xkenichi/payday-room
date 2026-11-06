@@ -4,7 +4,7 @@
 
 Built for **Flip the Switch** (WeMakeDevs × Switch), Track 1: Best Business Workflow.
 
-> Demo video: _link added on submission_ · Testnet only: no real money moves.
+> **[Demo video (2 min)](https://youtu.be/gD8b8OmcA8c)**: both live paydays, start to finish · Testnet only: no real money moves.
 
 ## Why
 
