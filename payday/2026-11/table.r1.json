@@ -1,0 +1,85 @@
+{
+  "kind": "payday-table",
+  "month": "2026-11",
+  "revision": 1,
+  "rules_hash": "4564f931bd4f",
+  "claims_hash": "b3fb0ef8b79e",
+  "pool_micro": "3000000",
+  "reserve_micro": "300000",
+  "distributable_micro": "2700000",
+  "cap_micro": "940000",
+  "rows": [
+    {
+      "handle": "bayo",
+      "name": "Bayo Adeyemi",
+      "wallet": "0x3DE8B916a34F54e953C990cB34Bd691d63b274F8",
+      "points": 6,
+      "payout_micro": "940000",
+      "capped": true,
+      "below_min": false,
+      "claims": [
+        "c4"
+      ]
+    },
+    {
+      "handle": "chioma",
+      "name": "Chioma Eze",
+      "wallet": "0xbE2bC9C881d400EC59cAF9481aB2058eF87Af349",
+      "points": 5,
+      "payout_micro": "900000",
+      "capped": false,
+      "below_min": false,
+      "claims": [
+        "c3"
+      ]
+    },
+    {
+      "handle": "ada",
+      "name": "Ada Okafor",
+      "wallet": "0xFf063d6D559FdFd2B24935164670285eA6ebe321",
+      "points": 3,
+      "payout_micro": "540000",
+      "capped": false,
+      "below_min": false,
+      "claims": [
+        "c1"
+      ]
+    },
+    {
+      "handle": "zainab",
+      "name": "Zainab Musa",
+      "wallet": "0x746E24938ca4D01E1983ae3fE76A6F17b7840268",
+      "points": 1,
+      "payout_micro": "180000",
+      "capped": false,
+      "below_min": false,
+      "claims": [
+        "c5"
+      ]
+    }
+  ],
+  "held": [
+    {
+      "ref": "c2",
+      "contributor": "tunde",
+      "flags": [
+        "unclear_size"
+      ],
+      "text": "for @tunde: hosted the October payday call and checked every receipt on the explorer https://testnet.arcscan.app/address/0xdE7F82c56e4b59fE6a59716455950B991038b922"
+    },
+    {
+      "ref": "c6",
+      "contributor": "chioma",
+      "flags": [
+        "unclear_size",
+        "duplicate"
+      ],
+      "text": "for @chioma: setup guide rewrite https://github.com/0xkenichi/payday-room/commit/ed4f0d4"
+    }
+  ],
+  "dropped": [],
+  "total_points": 15,
+  "total_payout_micro": "2560000",
+  "to_reserve_micro": "440000",
+  "table_hash": "a7e04e47db80"
+}

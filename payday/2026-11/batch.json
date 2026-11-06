@@ -1,0 +1,75 @@
+{
+  "kind": "payday-batch",
+  "batch_id": "PAY-2026-11-7ff678",
+  "month": "2026-11",
+  "table_revision": 2,
+  "table_hash": "a7f34bd2cf3b",
+  "chain_id": 5042002,
+  "token": "0x3600000000000000000000000000000000000000",
+  "from": "0xdE7F82c56e4b59fE6a59716455950B991038b922",
+  "planned_at": "2026-11-06T16:33:39.520Z",
+  "total_micro": "2700000",
+  "transfers": [
+    {
+      "i": 1,
+      "handle": "bayo",
+      "wallet": "0x3DE8B916a34F54e953C990cB34Bd691d63b274F8",
+      "amount_micro": "900000",
+      "tx_hash": "0x896d53f0b8fc781ee7d7e9eea633004ecb5244942eaca1b41ac9c3bde1a49e00",
+      "status": "success",
+      "block": "71057487"
+    },
+    {
+      "i": 2,
+      "handle": "chioma",
+      "wallet": "0xbE2bC9C881d400EC59cAF9481aB2058eF87Af349",
+      "amount_micro": "750000",
+      "tx_hash": "0xc06e7ee3f6251b6ce2436ba602fe6a6446ce675154c8e096983b3200ef3d104e",
+      "status": "success",
+      "block": "71057493"
+    },
+    {
+      "i": 3,
+      "handle": "ada",
+      "wallet": "0xFf063d6D559FdFd2B24935164670285eA6ebe321",
+      "amount_micro": "450000",
+      "tx_hash": "0x00575401c30a5f8ae47640f76399cff79193f8da594ee4304ad3d7a26283734e",
+      "status": "success",
+      "block": "71057496"
+    },
+    {
+      "i": 4,
+      "handle": "tunde",
+      "wallet": "0x52A8b5eC3c3C710C0e0143B5d3F56177d43a8C7B",
+      "amount_micro": "450000",
+      "tx_hash": "0xdca7e8256a139cdd56af8fd20dbcd62d98b0d7a41e496cc70f10f58b713a387e",
+      "status": "success",
+      "block": "71057498"
+    },
+    {
+      "i": 5,
+      "handle": "zainab",
+      "wallet": "0x746E24938ca4D01E1983ae3fE76A6F17b7840268",
+      "amount_micro": "150000",
+      "tx_hash": "0xee3b9d66bd0eccd9b1a42f742a453219b00cca4d712e29f299e182912d644a39",
+      "status": "success",
+      "block": "71057500"
+    }
+  ],
+  "status": "sent",
+  "approvals": [
+    {
+      "by": "stillkenichi",
+      "text": "@treasurer approve PAY-2026-11-7ff678",
+      "at": "2026-11-06T16:34:14.103Z",
+      "message_id": "sw_eb58d75c72fef316cd80e318a14d351c"
+    },
+    {
+      "by": "playingsidequest",
+      "text": "@treasurer approve PAY-2026-11-7ff678",
+      "at": "2026-11-06T16:36:49.148Z",
+      "message_id": "sw_b5417d9472382e1e70cc628212567683"
+    }
+  ],
+  "sent_at": "2026-11-06T16:37:38.395Z"
+}

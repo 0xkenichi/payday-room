@@ -1,0 +1,50 @@
+[
+  {
+    "by": "treasurer",
+    "text": "@stillkenichi @playingSideQuest November batch is planned. Two approvals needed before anything moves.\n\n```\nBATCH PAY-2026-11-7ff678 · Arc testnet · USDC\ntable 2026-11 r2 (a7f34bd2cf3b)\n\n 1. bayo      0.90  0x3DE8B916a34F54e953C990cB34Bd691d63b274F8\n 2. chioma    0.75  0xbE2bC9C881d400EC59cAF9481aB2058eF87Af349\n 3. ada       0.45  0xFf063d6D559FdFd2B24935164670285eA6ebe321\n 4. tunde     0.45  0x52A8b5eC3c3C710C0e0143B5d3F56177d43a8C7B\n 5. zainab    0.15  0x746E24938ca4D01E1983ae3fE76A6F17b7840268\n\ntotal 2.70 USDC from 0xdE7F82c56e4b59fE6a59716455950B991038b922\ntreasury holds 16.55 USDC\n```\n\nTwo approvers, reply exactly: @treasurer approve PAY-2026-11-7ff678",
+    "at": "2026-11-06T16:33:50.132Z",
+    "message_id": "sw_1ceb9c22b1fb4b73b1f1391acce5ff8f"
+  },
+  {
+    "by": "stillkenichi",
+    "text": "@treasurer approve PAY-2026-11-7ff678",
+    "at": "2026-11-06T16:34:14.103Z",
+    "message_id": "sw_eb58d75c72fef316cd80e318a14d351c"
+  },
+  {
+    "by": "treasurer",
+    "text": "@playingSideQuest 1 of 2 approvals for PAY-2026-11-7ff678: stillkenichi. One more needed from you — reply exactly: @treasurer approve PAY-2026-11-7ff678",
+    "at": "2026-11-06T16:34:41.375Z",
+    "message_id": "sw_145018d80408472b928e836b4fc5d2e4"
+  },
+  {
+    "by": "stillkenichi",
+    "text": "@treasurer approve PAY-2026-11-7ff678",
+    "at": "2026-11-06T16:35:12.600Z",
+    "message_id": "sw_f2ed0d20cef7a295746e370ce05401c8"
+  },
+  {
+    "by": "treasurer",
+    "text": "@playingSideQuest Still 1 of 2 approvals for PAY-2026-11-7ff678: stillkenichi. A second approval from the same person counts once — the other one has to come from you. Reply exactly: @treasurer approve PAY-2026-11-7ff678",
+    "at": "2026-11-06T16:35:38.055Z",
+    "message_id": "sw_7c5a668ee1fe4a03be3acd058b402200"
+  },
+  {
+    "by": "stillkenichi",
+    "text": "@treasurer approve PAY-2026-11-7ff678",
+    "at": "2026-11-06T16:35:50.693Z",
+    "message_id": "sw_e75a9b6317e9874c8580a0673c844be7"
+  },
+  {
+    "by": "treasurer",
+    "text": "@stillkenichi @playingSideQuest Still 1 of 2 approvals for PAY-2026-11-7ff678: stillkenichi. stillkenichi, your approval is already counted — repeating it doesn't add a second one, and I can't send on one approver. playingSideQuest, the batch moves as soon as you reply exactly: @treasurer approve PAY-2026-11-7ff678",
+    "at": "2026-11-06T16:36:20.844Z",
+    "message_id": "sw_2ee4559046ae471ebd5d5659d80689c0"
+  },
+  {
+    "by": "playingSideQuest",
+    "text": "@treasurer approve PAY-2026-11-7ff678",
+    "at": "2026-11-06T16:36:49.148Z",
+    "message_id": "sw_b5417d9472382e1e70cc628212567683"
+  }
+]

@@ -1,0 +1,89 @@
+{
+  "month": "2026-11",
+  "claims": [
+    {
+      "ref": "c1",
+      "contributor": "ada",
+      "posted_by": "stillkenichi",
+      "posted_at": "2026-11-06T16:29:21.629Z",
+      "message_id": "sw_b44de0af034f9093a7baabc0394a214f",
+      "text": "for @ada: made Treasurer wake on an @mention so approvals reach it, about two hours https://github.com/0xkenichi/payday-room/commit/fa08828",
+      "type": "code",
+      "size": "S",
+      "size_source": "stated",
+      "evidence": "https://github.com/0xkenichi/payday-room/commit/fa08828"
+    },
+    {
+      "ref": "c2",
+      "contributor": "tunde",
+      "posted_by": "stillkenichi",
+      "posted_at": "2026-11-06T16:29:24.061Z",
+      "message_id": "sw_dcea770cfd5f2609eef3eca425980755",
+      "text": "for @tunde: hosted the October payday call and checked every receipt on the explorer https://testnet.arcscan.app/address/0xdE7F82c56e4b59fE6a59716455950B991038b922",
+      "type": "community",
+      "size": "M",
+      "size_source": "stated",
+      "evidence": "https://testnet.arcscan.app/address/0xdE7F82c56e4b59fE6a59716455950B991038b922",
+      "note": "no size given; hosting a call plus checking every receipt reads as M",
+      "edits": [
+        {
+          "field": "size",
+          "from": "M",
+          "to": "M",
+          "by": "stillkenichi"
+        }
+      ]
+    },
+    {
+      "ref": "c3",
+      "contributor": "chioma",
+      "posted_by": "stillkenichi",
+      "posted_at": "2026-11-06T16:29:54.635Z",
+      "message_id": "sw_9e034001034788f32df987bb9f0e2310",
+      "text": "for @chioma: rewrote the setup guide after the first live run, half a day https://github.com/0xkenichi/payday-room/commit/ed4f0d4",
+      "type": "docs",
+      "size": "M",
+      "size_source": "stated",
+      "evidence": "https://github.com/0xkenichi/payday-room/commit/ed4f0d4"
+    },
+    {
+      "ref": "c4",
+      "contributor": "bayo",
+      "posted_by": "stillkenichi",
+      "posted_at": "2026-11-06T16:29:59.890Z",
+      "message_id": "sw_c2daa20a23020d6e0def05ca01e2be35",
+      "text": "for @bayo: designed the chat layout for the demo video, two days https://github.com/0xkenichi/payday-room/tree/main/video",
+      "type": "design",
+      "size": "M",
+      "size_source": "stated",
+      "evidence": "https://github.com/0xkenichi/payday-room/tree/main/video"
+    },
+    {
+      "ref": "c5",
+      "contributor": "zainab",
+      "posted_by": "stillkenichi",
+      "posted_at": "2026-11-06T16:30:05.575Z",
+      "message_id": "sw_c04b636160cdb060eb9fe43083d33bc7",
+      "text": "for @zainab: reviewed the October batch before it went out, about an hour https://github.com/0xkenichi/payday-room/blob/main/payday/2026-10/batch.json",
+      "type": "review",
+      "size": "S",
+      "size_source": "stated",
+      "evidence": "https://github.com/0xkenichi/payday-room/blob/main/payday/2026-10/batch.json"
+    },
+    {
+      "ref": "c6",
+      "contributor": "chioma",
+      "posted_by": "stillkenichi",
+      "posted_at": "2026-11-06T16:30:10.633Z",
+      "message_id": "sw_2474cfc359750f11009130ea4cdaed87",
+      "text": "for @chioma: setup guide rewrite https://github.com/0xkenichi/payday-room/commit/ed4f0d4",
+      "type": "docs",
+      "size": "M",
+      "size_source": "inferred",
+      "evidence": "https://github.com/0xkenichi/payday-room/commit/ed4f0d4",
+      "note": "no size given; same commit as c3, so it looks like a repeat of that claim. Matched c3's size M.",
+      "resolution": "drop",
+      "resolved_by": "stillkenichi"
+    }
+  ]
+}
