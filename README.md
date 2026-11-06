@@ -22,30 +22,51 @@ sequenceDiagram
     participant T as Tally (Claude Code)
     participant R as Treasurer (Claude Code)
     participant Arc as Arc testnet
-    C->>T: claim: fixed the rounding bug, 1 day, <link>
-    L->>T: @tally tally November
+    C->>T: for @tunde: hosted the October payday call <link>
+    L->>T: @tally please tally November (2026-11)
     T->>T: read_context → claims.json → scripts/tally.ts
-    T->>L: draft table r1 + 3 claims held (no link, size guessed, unknown person)
-    L->>T: accept c4 · drop c7 · c5 size S
-    T->>L: table r2
+    T->>L: table r1, 2 claims held (size guessed, same link twice)
+    L->>T: c2 size M, drop c6
+    T->>L: table r2, nothing held
     L->>T: approve table r2
-    T->>R: @treasurer table r2 is approved
-    R->>A: batch PAY-2026-11-xxxxxx (5 transfers, 2.55 USDC). Reply "approve PAY-…"
-    A->>R: approve PAY-2026-11-xxxxxx (×2, different people)
+    T->>R: @treasurer table r2 for 2026-11 is approved
+    R->>A: batch PAY-2026-11-7ff678 (5 transfers, 2.70 USDC)
+    A->>R: @treasurer approve PAY-2026-11-7ff678 (×2, different people)
     R->>R: scripts/pay-batch.ts verify → 2 of 2
     R->>L: Switch approval card: allow "pay-batch.ts send"?
-    L->>R: Allow
+    L->>R: Allow once
     R->>Arc: 5 USDC transfers
-    R->>C: receipts with arcscan links · ledger.csv updated
+    R->>C: receipts with explorer links · ledger.csv updated
 ```
 
 1. **Contributors post claims** in the Payday Room in plain words, with a link: `claim: wrote the setup guide, half a day <link>`. A lead can post for someone with `for @ada: …`.
 2. **The lead asks Tally to tally the month.** Tally reads the room through Switch, writes `payday/<month>/claims.json`, and runs `scripts/tally.ts`, which applies [`PAYOUT_RULES.md`](PAYOUT_RULES.md): points per task and size, a 3 USDC pool, a 10% reserve, a 35% cap and rounding down. Tally posts the table and **holds** anything unclear: no evidence, a guessed size, a duplicate link, someone not in [`team.yaml`](team.yaml).
 3. **The lead fixes or approves it in the thread** (`accept c4`, `drop c7`, `c5 size S`, `approve table r2`). Only the lead named in `team.yaml` can do this; the script checks.
-4. **Treasurer plans one batch** with `scripts/pay-batch.ts plan`. The batch id is a hash of who gets what, so `approve PAY-2026-11-3f9a1c` can only ever approve that exact list.
+4. **Treasurer plans one batch** with `scripts/pay-batch.ts plan`. The batch id is a hash of who gets what, so `approve PAY-2026-11-7ff678` can only ever approve that exact list.
 5. **Two different approvers reply** `@treasurer approve PAY-…`. Treasurer copies their messages from the room into `approvals.json`, and `pay-batch.ts verify` counts them: they must be in `team.yaml`, quote the id, come after the batch was posted, and not be paid in it.
 6. **Switch asks a person to allow the send.** `pay-batch.ts send` is an "ask" command in the agents' permissions, so Switch posts an approval card in the room and the command waits for a human to press Allow.
 7. **Treasurer sends and reports.** One USDC transfer per person on Arc testnet, each receipt checked, links posted in the room, and every transfer appended to [`ledger.csv`](ledger.csv). A month that's in the ledger can't be paid again.
+
+## Two live paydays
+
+Both ran end to end on 6 November 2026, in a Telegram group bridged by Switch, with the two agents running on my Mac and paying out on Arc testnet. The contributors (ada, tunde, chioma, bayo, zainab) are demo personas with fresh testnet wallets, so the lead posts their claims for them (`for @ada: …`) and each claim links to real work in this repo. The lead and the second approver are my two Telegram accounts, @stillkenichi and @playingSideQuest; in a real team they'd be two people.
+
+| Month | What Tally held, and what the lead did | Batch | Paid |
+|---|---|---|---|
+| [October](payday/2026-10) | Held a guessed size, a claim with no link and someone not on the team. The lead accepted the first, dropped the other two and approved r2. | `PAY-2026-10-9f3dc2` | 1.76 USDC to 4 people ([receipts](payday/2026-10/receipts.md)) |
+| [November](payday/2026-11) | Held a guessed size and a link claimed twice. The lead set the size to M, dropped the repeat and approved r2. | `PAY-2026-11-7ff678` | 2.70 USDC to 5 people ([receipts](payday/2026-11/receipts.md)) |
+
+Each folder has the claims Tally wrote down, every table revision, the lead's approval, the approvers' messages as Treasurer copied them, the batch and the receipts. Every transfer is in [`ledger.csv`](ledger.csv) with its explorer link.
+
+What the runs taught us:
+
+- **In October the 35% cap did its job.** ada's large code claim would have taken 1.86 of the 2.70; the cap held it at 0.94 and the rest stayed in the reserve, as the rules say.
+- **Switch only wakes an agent when it's mentioned.** October's second approval came in as plain `approve PAY-…`, so Treasurer never saw it until the lead nudged it. Treasurer now asks approvers for `@treasurer approve PAY-…`, and November's approvals went through first time.
+- **The card is real.** Both sends stopped at a Switch approval card in the group (A1 in October, A2 in November) and ran only after someone pressed Allow once.
+
+| Tally's draft, with held claims | The batch, waiting for two approvers | Switch's card before the send | Receipts in the room |
+|---|---|---|---|
+| ![Tally's table](docs/screenshots/tally-table.png) | ![Treasurer's batch](docs/screenshots/batch.png) | ![Switch approval card](docs/screenshots/allow-card.png) | ![Receipts](docs/screenshots/receipts.png) |
 
 ## How Switch is used (and why it doesn't work without it)
 
@@ -81,13 +102,17 @@ You need macOS, Node 23.6 or newer, a Telegram account, and Claude Code signed i
 ## Safety
 
 - **Testnet only.** `pay-batch.ts` refuses any chain but Arc testnet (5042002), whatever the RPC says.
-- **No key in any prompt.** The treasury key lives in `.env`, which the script reads when it sends. The agents' permissions (`.claude/settings.json`) deny reading `.env`, `cat`, `env` and `printenv`, and deny editing the scripts, the rules, the team file and the ledger.
+- **No key in any prompt.** The treasury key lives in `.env`, which the script reads when it sends. The agents' permissions (`.claude/settings.json`) deny reading `.env`, `cat`, `env`, `printenv` and inline code (`node -e`, `python3 -c`), and deny editing the scripts, the rules, the team file and the ledger.
+- **The rules hold in Switch's auto mode.** Switch runs its Claude Code agents with `--permission-mode auto`. Deny and ask rules still apply there, and both fired in the live runs: `cat` was refused, and `send` waited for a card.
 - **The agent can't skip the humans.** The approval check is in the script, not in the prompt: two different approvers from `team.yaml`, quoting the batch id, after the batch was posted, and not paid in it. Then Switch's approval card gates the send command itself.
 - **Approvals can't be reused.** The batch id is a hash of the month, the approved table, the chain, the token, the sender and every transfer. Change one cent and it's a different batch.
 - **Paid once.** Each transfer's hash is saved before its receipt is awaited, so a crash can't double-pay, and a month already in the ledger is refused.
 - **Agents don't judge.** Unclear claims are held for the lead. Unknown people and unknown tasks can't be accepted until a human edits `team.yaml` or the rules in a pull request.
 
-**Known limit:** Treasurer copies the approvals out of the room into `approvals.json`. The script checks everything about them, but it trusts that copy. The next step is for `pay-batch.ts` to fetch the approvals from Switch itself, so even a misbehaving agent couldn't invent one.
+**Known limits:**
+
+- Treasurer copies the approvals out of the room into `approvals.json`. The script checks everything about them, but it trusts that copy. The next step is for `pay-batch.ts` to fetch the approvals from Switch itself, so even a misbehaving agent couldn't invent one.
+- The agents run as your user, so the permission rules are guardrails, not a wall. An agent determined to reach the key file by a route the rules don't name could. For real funds, keep the signer out of the agents' reach: a separate OS user, or a wallet with its own approval step.
 
 ## Files
 

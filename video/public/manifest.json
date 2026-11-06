@@ -3,6 +3,9 @@
     "vo/intro.mp3",
     "vo/opener.mp3",
     "vo/outro.mp3",
+    "vo/receipts.mp3",
+    "vo/tally.mp3",
+    "vo/treasurer.mp3",
     "shots/r1-01-claims.png",
     "shots/r1-02-tally-working.png",
     "shots/r1-03-tally-table.png",
@@ -11,7 +14,11 @@
     "shots/r1-05-handoff.png",
     "shots/r1-06-batch.png",
     "shots/r1-07-one-of-two.png",
+    "shots/r1-08-second-approval.png",
+    "shots/r1-09-allow.png",
+    "shots/r1-10-receipts.png",
     "shots/wide-01-template.png",
-    "shots/wide-02-created.png"
+    "shots/wide-02-created.png",
+    "shots/wide-03-arcscan.png"
   ]
 }
