@@ -43,7 +43,7 @@ sequenceDiagram
 2. **The lead asks Tally to tally the month.** Tally reads the room through Switch, writes `payday/<month>/claims.json`, and runs `scripts/tally.ts`, which applies [`PAYOUT_RULES.md`](PAYOUT_RULES.md): points per task and size, a 3 USDC pool, a 10% reserve, a 35% cap and rounding down. Tally posts the table and **holds** anything unclear: no evidence, a guessed size, a duplicate link, someone not in [`team.yaml`](team.yaml).
 3. **The lead fixes or approves it in the thread** (`accept c4`, `drop c7`, `c5 size S`, `approve table r2`). Only the lead named in `team.yaml` can do this; the script checks.
 4. **Treasurer plans one batch** with `scripts/pay-batch.ts plan`. The batch id is a hash of who gets what, so `approve PAY-2026-11-3f9a1c` can only ever approve that exact list.
-5. **Two different approvers reply** `approve PAY-…`. Treasurer copies their messages from the room into `approvals.json`, and `pay-batch.ts verify` counts them: they must be in `team.yaml`, quote the id, come after the batch was posted, and not be paid in it.
+5. **Two different approvers reply** `@treasurer approve PAY-…`. Treasurer copies their messages from the room into `approvals.json`, and `pay-batch.ts verify` counts them: they must be in `team.yaml`, quote the id, come after the batch was posted, and not be paid in it.
 6. **Switch asks a person to allow the send.** `pay-batch.ts send` is an "ask" command in the agents' permissions, so Switch posts an approval card in the room and the command waits for a human to press Allow.
 7. **Treasurer sends and reports.** One USDC transfer per person on Arc testnet, each receipt checked, links posted in the room, and every transfer appended to [`ledger.csv`](ledger.csv). A month that's in the ledger can't be paid again.
 
@@ -71,9 +71,10 @@ You need macOS, Node 23.6 or newer, a Telegram account, and Claude Code signed i
    ```
 3. **Make a testnet treasury.** Copy `.env.example` to `.env` and put a fresh testnet-only key in it. Fund it with testnet USDC at [faucet.circle.com](https://faucet.circle.com) (Arc testnet, 20 USDC every 2 hours). Check it: `npm run balance`.
 4. **Edit `team.yaml`:** your lead, your two approvers (chat usernames), and your contributors' testnet wallets.
-5. **Connect Telegram to Switch:** in @BotFather, `/newbot`, then Bot Settings → Group Privacy → Turn off. In Switch Console: Home → Messaging apps → Connect → Telegram, with the bot's token and username. Make a Telegram group, add the bot, post once, and link your Telegram account in Console (Home → Link your Telegram account).
-6. **Create the agents from the template:** Templates → Import template → choose `switch/payday-room.template.yaml` → Use. Pick your Telegram group's room and your clone's folder, then Create.
-7. **Run a payday:** post a few claims in the group, then `@tally tally 2026-11`.
+5. **Connect Telegram to Switch:** in @BotFather, `/newbot`. In Switch Console: Home → Messaging apps → Connect → Telegram, with the bot's token and username. Make a Telegram group, add the bot, and **make the bot an admin** so Switch sees every message, not only mentions (or turn Group Privacy off in BotFather first). Post once, then link your Telegram account in Console (Home → Link account).
+6. **Let this Mac run agents:** in Console, open Your Agents → Add agent once. That enrolls this computer as an agents controller; you can cancel the dialog.
+7. **Create the agents from the template:** Templates → Import template → choose `switch/payday-room.template.yaml` → Use. Switch the room to your Telegram group's room, set the folder to your clone (an absolute path), then Create agents.
+8. **Run a payday:** post claims in the group (`for @ada: … <link>`), then `@tally please tally 2026-11`. Approvers answer Treasurer with `@treasurer approve PAY-…`: Switch only wakes an agent when it's mentioned.
 
 `npm test` runs the rule and approval checks offline.
 
