@@ -1,0 +1,81 @@
+{
+  "kind": "payday-table",
+  "month": "2026-10",
+  "revision": 1,
+  "rules_hash": "4564f931bd4f",
+  "claims_hash": "971cb6e21496",
+  "pool_micro": "3000000",
+  "reserve_micro": "300000",
+  "distributable_micro": "2700000",
+  "cap_micro": "940000",
+  "rows": [
+    {
+      "handle": "ada",
+      "name": "Ada Okafor",
+      "wallet": "0xFf063d6D559FdFd2B24935164670285eA6ebe321",
+      "points": 20,
+      "payout_micro": "940000",
+      "capped": true,
+      "below_min": false,
+      "claims": [
+        "c1"
+      ]
+    },
+    {
+      "handle": "chioma",
+      "name": "Chioma Eze",
+      "wallet": "0xbE2bC9C881d400EC59cAF9481aB2058eF87Af349",
+      "points": 5,
+      "payout_micro": "510000",
+      "capped": false,
+      "below_min": false,
+      "claims": [
+        "c2"
+      ]
+    },
+    {
+      "handle": "zainab",
+      "name": "Zainab Musa",
+      "wallet": "0x746E24938ca4D01E1983ae3fE76A6F17b7840268",
+      "points": 1,
+      "payout_micro": "100000",
+      "capped": false,
+      "below_min": false,
+      "claims": [
+        "c4"
+      ]
+    }
+  ],
+  "held": [
+    {
+      "ref": "c3",
+      "contributor": "tunde",
+      "flags": [
+        "unclear_size"
+      ],
+      "text": "for @tunde: ran the testnet rehearsal with the team and wrote up the receipts https://github.com/0xkenichi/payday-room/blob/main/docs/rehearsal/2026-09/receipts.md"
+    },
+    {
+      "ref": "c5",
+      "contributor": "bayo",
+      "flags": [
+        "no_evidence"
+      ],
+      "text": "for @bayo: designed the Switch template form layout, a couple of hours"
+    },
+    {
+      "ref": "c6",
+      "contributor": "kola",
+      "flags": [
+        "unknown_contributor",
+        "unknown_task"
+      ],
+      "text": "for @kola: translated PAYOUT_RULES.md into Yoruba, a day of work https://github.com/0xkenichi/payday-room/blob/main/PAYOUT_RULES.md"
+    }
+  ],
+  "dropped": [],
+  "total_points": 26,
+  "total_payout_micro": "1550000",
+  "to_reserve_micro": "1450000",
+  "table_hash": "e3fb443be9ac"
+}

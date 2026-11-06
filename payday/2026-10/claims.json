@@ -1,0 +1,83 @@
+{
+  "month": "2026-10",
+  "claims": [
+    {
+      "ref": "c1",
+      "contributor": "ada",
+      "posted_by": "stillkenichi",
+      "posted_at": "2026-11-06T15:07:15.555Z",
+      "message_id": "sw_f5b0904392ed872ed9c168de52eb5151",
+      "text": "for @ada: built the pay-batch script that sends the month's USDC as one batch, about three days of work https://github.com/0xkenichi/payday-room/blob/main/scripts/pay-batch.ts",
+      "type": "code",
+      "size": "L",
+      "size_source": "stated",
+      "evidence": "https://github.com/0xkenichi/payday-room/blob/main/scripts/pay-batch.ts"
+    },
+    {
+      "ref": "c2",
+      "contributor": "chioma",
+      "posted_by": "stillkenichi",
+      "posted_at": "2026-11-06T15:07:17.078Z",
+      "message_id": "sw_83fede30a763b34c102c531f410b9a8b",
+      "text": "for @chioma: wrote the 10-minute setup guide, half a day https://github.com/0xkenichi/payday-room#set-it-up-in-10-minutes",
+      "type": "docs",
+      "size": "M",
+      "size_source": "stated",
+      "evidence": "https://github.com/0xkenichi/payday-room#set-it-up-in-10-minutes"
+    },
+    {
+      "ref": "c3",
+      "contributor": "tunde",
+      "posted_by": "stillkenichi",
+      "posted_at": "2026-11-06T15:07:19.410Z",
+      "message_id": "sw_77eda36cab0ad23002c7b03c4d731c1a",
+      "text": "for @tunde: ran the testnet rehearsal with the team and wrote up the receipts https://github.com/0xkenichi/payday-room/blob/main/docs/rehearsal/2026-09/receipts.md",
+      "type": "community",
+      "size": "M",
+      "size_source": "inferred",
+      "evidence": "https://github.com/0xkenichi/payday-room/blob/main/docs/rehearsal/2026-09/receipts.md",
+      "note": "no size given; a team rehearsal plus a write-up reads as M. The receipts are filed under 2026-09, so the lead may want to confirm the month.",
+      "resolution": "accept",
+      "resolved_by": "stillkenichi"
+    },
+    {
+      "ref": "c4",
+      "contributor": "zainab",
+      "posted_by": "stillkenichi",
+      "posted_at": "2026-11-06T15:07:21.592Z",
+      "message_id": "sw_466b4cf24c6475ff39586e7760cd5a16",
+      "text": "for @zainab: reviewed the approval checks in the tests, about an hour https://github.com/0xkenichi/payday-room/blob/main/test/payday.test.ts",
+      "type": "review",
+      "size": "S",
+      "size_source": "stated",
+      "evidence": "https://github.com/0xkenichi/payday-room/blob/main/test/payday.test.ts"
+    },
+    {
+      "ref": "c5",
+      "contributor": "bayo",
+      "posted_by": "stillkenichi",
+      "posted_at": "2026-11-06T15:07:23.676Z",
+      "message_id": "sw_3e4f1547eefb28563565c69c933502c1",
+      "text": "for @bayo: designed the Switch template form layout, a couple of hours",
+      "type": "design",
+      "size": "S",
+      "size_source": "stated",
+      "resolution": "drop",
+      "resolved_by": "stillkenichi"
+    },
+    {
+      "ref": "c6",
+      "contributor": "kola",
+      "posted_by": "stillkenichi",
+      "posted_at": "2026-11-06T15:07:26.018Z",
+      "message_id": "sw_b5c4551921da0c7d3e144b6f41905d1e",
+      "text": "for @kola: translated PAYOUT_RULES.md into Yoruba, a day of work https://github.com/0xkenichi/payday-room/blob/main/PAYOUT_RULES.md",
+      "type": "translation",
+      "size": "M",
+      "size_source": "stated",
+      "evidence": "https://github.com/0xkenichi/payday-room/blob/main/PAYOUT_RULES.md",
+      "resolution": "drop",
+      "resolved_by": "stillkenichi"
+    }
+  ]
+}

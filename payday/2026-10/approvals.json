@@ -1,0 +1,44 @@
+[
+  {
+    "by": "treasurer",
+    "text": "@stillkenichi @playingSideQuest October batch is planned. Two approvals needed before anything moves.\n\n```\nBATCH PAY-2026-10-9f3dc2 · Arc testnet · USDC\ntable 2026-10 r2 (0d745f414f38)\n\n 1. ada       0.94  0xFf063d6D559FdFd2B24935164670285eA6ebe321\n 2. chioma    0.46  0xbE2bC9C881d400EC59cAF9481aB2058eF87Af349\n 3. tunde     0.27  0x52A8b5eC3c3C710C0e0143B5d3F56177d43a8C7B\n 4. zainab    0.09  0x746E24938ca4D01E1983ae3fE76A6F17b7840268\n\ntotal 1.76 USDC from 0xdE7F82c56e4b59fE6a59716455950B991038b922\ntreasury holds 18.32 USDC\n```\n\nTwo approvers, reply exactly: approve PAY-2026-10-9f3dc2",
+    "at": "2026-11-06T15:11:43.927Z",
+    "message_id": "sw_3142bb7df8f34eb699acb0165bccf4ec"
+  },
+  {
+    "by": "stillkenichi",
+    "text": "approve PAY-2026-10-9f3dc2",
+    "at": "2026-11-06T15:12:11.586Z",
+    "message_id": "sw_fb4497a2e33ad897cef21c6735b9e47e"
+  },
+  {
+    "by": "stillkenichi",
+    "text": "@treasurer approve PAY-2026-10-9f3dc2",
+    "at": "2026-11-06T15:12:56.328Z",
+    "message_id": "sw_253d94f6ae369c11005cf85a96e88625"
+  },
+  {
+    "by": "treasurer",
+    "text": "@playingSideQuest 1 of 2 approvals for PAY-2026-10-9f3dc2: stillkenichi. One more needed from you — reply exactly: approve PAY-2026-10-9f3dc2",
+    "at": "2026-11-06T15:13:27.170Z",
+    "message_id": "sw_bb333426b25441ba9effad64f9ffdffa"
+  },
+  {
+    "by": "playingSideQuest",
+    "text": "approve PAY-2026-10-9f3dc2",
+    "at": "2026-11-06T15:22:43.072Z",
+    "message_id": "sw_6c151c1be993a8fd7f977d4d89a8909d"
+  },
+  {
+    "by": "stillkenichi",
+    "text": "approve PAY-2026-10-9f3dc2",
+    "at": "2026-11-06T15:23:05.133Z",
+    "message_id": "sw_352cbb3e99cd38f5ee2ef2829f628298"
+  },
+  {
+    "by": "stillkenichi",
+    "text": "@treasurer the second approval is in above from @playingSideQuest. Check PAY-2026-10-9f3dc2 again.",
+    "at": "2026-11-06T16:23:59.489Z",
+    "message_id": "sw_fcd0b7177e2900169a8eaf3f6992a2a7"
+  }
+]

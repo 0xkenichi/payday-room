@@ -1,0 +1,76 @@
+{
+  "kind": "payday-table",
+  "month": "2026-10",
+  "revision": 2,
+  "rules_hash": "4564f931bd4f",
+  "claims_hash": "60bd41821135",
+  "pool_micro": "3000000",
+  "reserve_micro": "300000",
+  "distributable_micro": "2700000",
+  "cap_micro": "940000",
+  "rows": [
+    {
+      "handle": "ada",
+      "name": "Ada Okafor",
+      "wallet": "0xFf063d6D559FdFd2B24935164670285eA6ebe321",
+      "points": 20,
+      "payout_micro": "940000",
+      "capped": true,
+      "below_min": false,
+      "claims": [
+        "c1"
+      ]
+    },
+    {
+      "handle": "chioma",
+      "name": "Chioma Eze",
+      "wallet": "0xbE2bC9C881d400EC59cAF9481aB2058eF87Af349",
+      "points": 5,
+      "payout_micro": "460000",
+      "capped": false,
+      "below_min": false,
+      "claims": [
+        "c2"
+      ]
+    },
+    {
+      "handle": "tunde",
+      "name": "Tunde Bello",
+      "wallet": "0x52A8b5eC3c3C710C0e0143B5d3F56177d43a8C7B",
+      "points": 3,
+      "payout_micro": "270000",
+      "capped": false,
+      "below_min": false,
+      "claims": [
+        "c3"
+      ]
+    },
+    {
+      "handle": "zainab",
+      "name": "Zainab Musa",
+      "wallet": "0x746E24938ca4D01E1983ae3fE76A6F17b7840268",
+      "points": 1,
+      "payout_micro": "90000",
+      "capped": false,
+      "below_min": false,
+      "claims": [
+        "c4"
+      ]
+    }
+  ],
+  "held": [],
+  "dropped": [
+    "c5",
+    "c6"
+  ],
+  "total_points": 29,
+  "total_payout_micro": "1760000",
+  "to_reserve_micro": "1240000",
+  "table_hash": "0d745f414f38",
+  "approved": {
+    "by": "stillkenichi",
+    "at": "2026-11-06T15:11:15.879Z",
+    "quote": "approve table r2",
+    "message_id": "sw_49f841698da293e532b70029958b8a7f"
+  }
+}

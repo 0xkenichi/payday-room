@@ -1,0 +1,66 @@
+{
+  "kind": "payday-batch",
+  "batch_id": "PAY-2026-10-9f3dc2",
+  "month": "2026-10",
+  "table_revision": 2,
+  "table_hash": "0d745f414f38",
+  "chain_id": 5042002,
+  "token": "0x3600000000000000000000000000000000000000",
+  "from": "0xdE7F82c56e4b59fE6a59716455950B991038b922",
+  "planned_at": "2026-11-06T15:11:37.865Z",
+  "total_micro": "1760000",
+  "transfers": [
+    {
+      "i": 1,
+      "handle": "ada",
+      "wallet": "0xFf063d6D559FdFd2B24935164670285eA6ebe321",
+      "amount_micro": "940000",
+      "tx_hash": "0x0e497e1ce0f826d3db8a637b8795ff0c5ac6b6e976d2c551dc5640633c50318d",
+      "status": "success",
+      "block": "71056437"
+    },
+    {
+      "i": 2,
+      "handle": "chioma",
+      "wallet": "0xbE2bC9C881d400EC59cAF9481aB2058eF87Af349",
+      "amount_micro": "460000",
+      "tx_hash": "0x90ad5905017120c4831c90a0e57b7b0deda4d6c0846e00d6d9e380b24d9a94d6",
+      "status": "success",
+      "block": "71056445"
+    },
+    {
+      "i": 3,
+      "handle": "tunde",
+      "wallet": "0x52A8b5eC3c3C710C0e0143B5d3F56177d43a8C7B",
+      "amount_micro": "270000",
+      "tx_hash": "0x769361ce26872f98c810482a7d01d5c477e32fc3d4b6ec55d612fdd728cc98ec",
+      "status": "success",
+      "block": "71056447"
+    },
+    {
+      "i": 4,
+      "handle": "zainab",
+      "wallet": "0x746E24938ca4D01E1983ae3fE76A6F17b7840268",
+      "amount_micro": "90000",
+      "tx_hash": "0x3baa8029b039235722092afbcf13c85164ccdc74cfa42f3f5cdf1c29be6bcc97",
+      "status": "success",
+      "block": "71056449"
+    }
+  ],
+  "status": "sent",
+  "approvals": [
+    {
+      "by": "stillkenichi",
+      "text": "approve PAY-2026-10-9f3dc2",
+      "at": "2026-11-06T15:12:11.586Z",
+      "message_id": "sw_fb4497a2e33ad897cef21c6735b9e47e"
+    },
+    {
+      "by": "playingsidequest",
+      "text": "approve PAY-2026-10-9f3dc2",
+      "at": "2026-11-06T15:22:43.072Z",
+      "message_id": "sw_6c151c1be993a8fd7f977d4d89a8909d"
+    }
+  ],
+  "sent_at": "2026-11-06T16:25:30.263Z"
+}
