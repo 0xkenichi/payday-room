@@ -11,7 +11,7 @@ lead: stillkenichi
 # Two different people from this list must approve a batch before it is sent.
 approvers:
   - stillkenichi
-  - second_approver   # replace with the second approver's chat username
+  - playingsidequest
 
 contributors:
   ada:
